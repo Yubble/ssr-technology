@@ -20,7 +20,7 @@
     "express": "^4.17.1",
     "vue": "^2.6.11",
     "vue-server-renderer": "^2.6.11",
-    "axios": "^0.16.0",
+    "axios": "^0.18.1",
     "babel": "^6.23.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
