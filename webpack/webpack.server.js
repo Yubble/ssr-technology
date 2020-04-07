@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-07 20:59:07
+ * @LastEditTime: 2020-04-07 21:36:13
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /ssr_pricinple/ssr-technology/webpack/webpack.server.js
+ */
 const path = require('path')
 const projectRoot = path.resolve(__dirname, '..')
 
@@ -8,6 +16,7 @@ if (!process.env.NODE_ENV) {
 
 module.exports = {
   target: 'node',
+  // entry: ['babel-polyfill', path.join(projectRoot, 'entry/test.js')],
   entry: ['babel-polyfill', path.join(projectRoot, 'entry/entry-server.js')],
   output: {
     libraryTarget: 'commonjs2',
