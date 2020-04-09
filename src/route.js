@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-07 20:59:07
+ * @LastEditTime: 2020-04-09 22:09:32
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /ssr_pricinple/ssr-technology/src/route.js
+ */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
