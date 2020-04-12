@@ -16,8 +16,8 @@ if (!process.env.NODE_ENV) {
 
 module.exports = {
   target: 'node',
-  // entry: ['babel-polyfill', path.join(projectRoot, 'entry/test.js')],
   entry: ['babel-polyfill', path.join(projectRoot, 'entry/entry-server.js')],
+  // entry: ['babel-polyfill', path.join(projectRoot, 'entry/test-server.js')],
   output: {
     libraryTarget: 'commonjs2',
     path: path.join(projectRoot, 'dist'),

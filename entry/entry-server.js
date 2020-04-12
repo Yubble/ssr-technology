@@ -7,9 +7,6 @@
  * @FilePath: /ssr_pricinple/ssr-technology/entry/entry-server.js
  */
 import { createApp } from '../src/main'
-import pra from '../pra'
-
-pra.start = true
 
 export default context => {
   return new Promise((resolve, reject) => {
@@ -19,7 +16,6 @@ export default context => {
 
     // 获取相应路由下的组件
     const matchedComponents = app.$router.getMatchedComponents()
-    console.log('matched Components is ', matchedComponents)
 
     if (!matchedComponents.length) { return reject({ code: 404 }) }
 

@@ -14,6 +14,8 @@ const createApp = require('./dist/bundle.server.js')['default']
 // 设置静态文件
 express.use('/', exp.static(__dirname + '/dist'))
 
+const clientBundleFileUrl = '/bundle.client.js'
+
 // <script src="${clientBundleFileUrl}"></script>
 
 // 响应路由请求
@@ -28,6 +30,7 @@ express.get('*', (req, res) => {
         <html lang="en">
           <head>
             <meta charset="UTF-8">
+            <script src="${clientBundleFileUrl}"></script>
             <title>Vue2.0 SSR渲染页面</title>
           </head>
           <body>
