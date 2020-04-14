@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-07 20:59:07
- * @LastEditTime: 2020-04-09 22:09:50
+ * @LastEditTime: 2020-04-14 16:51:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /ssr_pricinple/ssr-technology/entry/entry-server.js
@@ -19,6 +19,14 @@ export default context => {
 
     if (!matchedComponents.length) { return reject({ code: 404 }) }
 
-    resolve(app)
+    // 遍历路由下所有的组件，如果有需要服务端渲染的请求，则进行请求
+    Promise.all(matchedComponents.map(component => {
+      if (component.serverRequest) {
+        return component.serverRequest(app.$store)
+      }
+    })).then(() => {
+      context.state = app.$store.state
+      resolve(app)
+    }).catch(reject)
   })
 }
