@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-04-07 20:59:07
- * @LastEditTime: 2020-04-14 16:13:55
+ * @LastEditTime: 2020-04-14 17:50:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /ssr_pricinple/ssr-technology/src/routes/home.vue
@@ -18,6 +18,9 @@
 export default {
   serverRequest(store) {
     return store.dispatch('getHomeInfo')
+  },
+  components: {
+    child: () => import('~/')
   },
   mounted() {
   },
