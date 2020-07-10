@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-07 20:59:07
- * @LastEditTime: 2020-06-18 22:05:26
+ * @LastEditTime: 2020-07-10 20:36:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /ssr_pricinple/ssr-technology/src/route.js
@@ -22,7 +22,7 @@ export default function createRouter() {
       },
       {
         path: '/success',
-        component: require('./views/success1.vue')
+        component: require('./views/success.vue')
       }
     ]
   })
